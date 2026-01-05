@@ -22,27 +22,35 @@ E:
 
 function length(string) {
   // YOUR CODE BELOW HERE //
-
-  // YOUR CODE ABOVE HERE //
+  // using .length get the length of the string
+  return string.length;
+ // YOUR CODE ABOVE HERE //
 }
+console.log(length("ball"));
 
 /**
  * Given an input String, return a new String forced to lowercase.
  */
 function toLowerCase(string) {
   // YOUR CODE BELOW HERE //
-
+// using toLowerCase contvert string to lowercase 
+  return string.toLowerCase();
   // YOUR CODE ABOVE HERE //
 }
+console.log(toLowerCase("Purple"));
 
 /**
  * Given an input String, return a new String forced to uppercase.
  */
 function toUpperCase(string) {
   // YOUR CODE BELOW HERE //
+  // using toUpperCase convert string to uppercase
+  return string.toUpperCase();
 
   // YOUR CODE ABOVE HERE //
 }
+console.log(toUpperCase("grapes"));
+
 
 /**
  * Given an input String, return a new String forced to dash-case.
@@ -59,6 +67,7 @@ function toUpperCase(string) {
  */
 function toDashCase(string) {
   // YOUR CODE BELOW HERE //
+// using to dash case convert string space to a dash 
 
   // YOUR CODE ABOVE HERE //
 }
