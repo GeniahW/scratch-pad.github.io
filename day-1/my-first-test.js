@@ -18,9 +18,10 @@
 
 function print(value) {
   // YOUR CODE BELOW HERE //
-
+return value;
   // YOUR CODE ABOVE HERE //
 }
+console.log(print)
 
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
 if (
