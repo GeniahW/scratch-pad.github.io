@@ -21,7 +21,13 @@
 
 function reverseString(input) {
   // YOUR CODE BELOW HERE //
-
+  let reversed = "";
+  // create a for loop  that loops through the string
+for (const c of string){
+  reversed = c + reversed
+}
+return reversed;
+}
   // YOUR CODE ABOVE HERE //
 }
 

@@ -12,7 +12,7 @@
  */
 function fizzBuzz() {
  // YOUR CODE BELOW HERE //
-
+for (let i = 0; i <= 100; )
  // YOUR CODE ABOVE HERE //
 }
 

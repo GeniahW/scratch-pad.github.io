@@ -2,6 +2,8 @@
 
 'use strict';
 
+const { replace } = require("lodash");
+
 /**
  * IN CLASS EXERCISE: stringy.js
  */
@@ -62,15 +64,21 @@ console.log(toUpperCase("grapes"));
  * TIP: How can you look for and replace a space in a String? How can you
  *      enforce lowercase? Look at the global replace link below, or, try String
  *      methods split and join?
- *
+ *  
  *      See: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace#Using_global_and_ignore_with_replace()
  */
 function toDashCase(string) {
   // YOUR CODE BELOW HERE //
-// using to dash case convert string space to a dash 
-
+// Lower case the string using to lower case 
+var string = string.toLowerCase();
+// split the string 
+var array = string.split(" ");
+// join the string together using joined()
+var string = array.join("-");
+return string;
   // YOUR CODE ABOVE HERE //
 }
+console.log(toDashCase("Hello World"));
 
 /**
  * Given an input String and a single character, return true if the String
@@ -86,9 +94,16 @@ function toDashCase(string) {
  */
 function beginsWith(string, char) {
   // YOUR CODE BELOW HERE //
-
-  // YOUR CODE ABOVE HERE //
-}
+  if(char === string[0].toLowerCase()){
+    return true;
+  } else if (char === string[0].toUpperCase()) {
+    return true;
+  } else {
+    return false;
+  }
+  // YOUR CODE A BOVE HERE //
+} 
+console.log(beginsWith("Max", "m"));
 
 /**
  * Given an input String and a single character, return true if the String
@@ -104,10 +119,16 @@ function beginsWith(string, char) {
  */
 function endsWith(string, char) {
   // YOUR CODE BELOW HERE //
-
+  if (char === string[string.length - 1].toLowerCase()) {
+    return true;
+  } else if (char === string[string.length - 1].toUpperCase()){
+    return true;
+  } else {
+    return false;
+  }
   // YOUR CODE ABOVE HERE //
 }
-
+ console.log("Max", "X");
 /**
  * Given two input Strings, return the Strings concatenated into one.
  *
@@ -115,9 +136,10 @@ function endsWith(string, char) {
  */
 function concat(stringOne, stringTwo) {
   // YOUR CODE BELOW HERE //
-
+return stringOne + stringTwo;
   // YOUR CODE ABOVE HERE //
 }
+console.log(concat("Love", "you"));
 
 /**
  * Given any number of Strings, return all of them joined together.
@@ -131,10 +153,12 @@ function concat(stringOne, stringTwo) {
  */
 function join(stringOne, stringTwo) {
   // YOUR CODE BELOW HERE //
-  var args = Array.from(arguments);
 
+  var args = Array.from(arguments);
+ return  args.join("");
   // YOUR CODE ABOVE HERE //
-}
+} 
+console.log(join("my", "name", "is", "Ben"));
 
 /**
  * Given two Strings, return the longest of the two.
@@ -147,9 +171,16 @@ function join(stringOne, stringTwo) {
  */
 function longest(stringOne, stringTwo) {
   // YOUR CODE BELOW HERE //
+if (string1.length > string2.length){
+  return string1;
+}
+else if (string2.length > string1.length) {
+return string2;
+}
+
 
   // YOUR CODE ABOVE HERE //
-}
+};
 
 /**
  * Given two Strings, return 1 if the first string is higher in alphabetical order (meaning earlier in the alphabet) than
@@ -160,9 +191,17 @@ function longest(stringOne, stringTwo) {
  */
 function sortAscending(stringOne, stringTwo) {
   // YOUR CODE BELOW HERE //
-
+  string.split();
+if (stringOne.sort() > stringTwo.sort()) {
+  return 1; 
+} else if (stringTwo.sort() < stringOne.sort()){
+  retun - 1;
+} if (stringOne.sort() === stringTwo.sort()){
+  return 0;
+}
   // YOUR CODE ABOVE HERE //
 }
+console.log(sortAscending("Bear", "Bear"));
 
 /**
  * Given two Strings, return 1 if the first is lower in alphabetical order (meaning later in the alphabet) than
