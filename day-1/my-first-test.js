@@ -18,10 +18,10 @@
 
 function print(value) {
   // YOUR CODE BELOW HERE //
-console.log(value);
+  console.log(value);
   // YOUR CODE ABOVE HERE //
 }
-console.log('RAIN');
+console.log(print("Rain"));
 
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
 if (

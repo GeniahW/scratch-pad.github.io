@@ -32,9 +32,14 @@ function createGreaterThanFilter(base) {
  */
 function createLessThanFilter(base) {
   // YOUR CODE BELOW HERE //
-  
+  if (value < base){
+    console.log(true);
+  } else {
+    console.log(false)
+  }
+  }
   // YOUR CODE ABOVE HERE //
-}
+
 
 /**
  * Given a startsWith character, which will be a single character, return a

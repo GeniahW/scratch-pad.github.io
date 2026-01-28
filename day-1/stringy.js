@@ -2,8 +2,6 @@
 
 'use strict';
 
-const { replace } = require("lodash");
-
 /**
  * IN CLASS EXERCISE: stringy.js
  */
@@ -64,18 +62,20 @@ console.log(toUpperCase("grapes"));
  * TIP: How can you look for and replace a space in a String? How can you
  *      enforce lowercase? Look at the global replace link below, or, try String
  *      methods split and join?
- *  
+ *
  *      See: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace#Using_global_and_ignore_with_replace()
  */
 function toDashCase(string) {
   // YOUR CODE BELOW HERE //
-// Lower case the string using to lower case 
+// lowercase the string using to lowercase
 var string = string.toLowerCase();
-// split the string 
+// split the string
 var array = string.split(" ");
-// join the string together using joined()
+// join the string together using .join() with a dash in between
 var string = array.join("-");
+// return the string
 return string;
+
   // YOUR CODE ABOVE HERE //
 }
 console.log(toDashCase("Hello World"));
@@ -94,16 +94,15 @@ console.log(toDashCase("Hello World"));
  */
 function beginsWith(string, char) {
   // YOUR CODE BELOW HERE //
-  if(char === string[0].toLowerCase()){
-    return true;
-  } else if (char === string[0].toUpperCase()) {
-    return true;
-  } else {
-    return false;
-  }
-  // YOUR CODE A BOVE HERE //
-} 
-console.log(beginsWith("Max", "m"));
+if(char === string[0].toLowerCase()){
+  return true;
+} else if ( char === string[0].toUpperCase()){
+  return true;
+} else {
+  return false;
+}
+  // YOUR CODE ABOVE HERE //
+}
 
 /**
  * Given an input String and a single character, return true if the String
@@ -119,16 +118,17 @@ console.log(beginsWith("Max", "m"));
  */
 function endsWith(string, char) {
   // YOUR CODE BELOW HERE //
-  if (char === string[string.length - 1].toLowerCase()) {
-    return true;
-  } else if (char === string[string.length - 1].toUpperCase()){
-    return true;
-  } else {
-    return false;
-  }
+if (char === string[string.length - 1].toUpperCase()){
+  return true;
+} if (char === string[string.length - 1].toLowerCase()){
+  return true;
+} else {
+  return false;
+}
+
   // YOUR CODE ABOVE HERE //
 }
- console.log("Max", "X");
+
 /**
  * Given two input Strings, return the Strings concatenated into one.
  *
@@ -139,8 +139,7 @@ function concat(stringOne, stringTwo) {
 return stringOne + stringTwo;
   // YOUR CODE ABOVE HERE //
 }
-console.log(concat("Love", "you"));
-
+console.log("Love", "You");
 /**
  * Given any number of Strings, return all of them joined together.
  *
@@ -153,11 +152,11 @@ console.log(concat("Love", "you"));
  */
 function join(stringOne, stringTwo) {
   // YOUR CODE BELOW HERE //
-
   var args = Array.from(arguments);
- return  args.join("");
+  return args.join("");
+
   // YOUR CODE ABOVE HERE //
-} 
+}
 console.log(join("my", "name", "is", "Ben"));
 
 /**
@@ -171,16 +170,14 @@ console.log(join("my", "name", "is", "Ben"));
  */
 function longest(stringOne, stringTwo) {
   // YOUR CODE BELOW HERE //
-if (string1.length > string2.length){
-  return string1;
+if (stringOne.length > stringTwo.length){
+  return stringOne;
 }
-else if (string2.length > string1.length) {
-return string2;
+if (stringTwo.length > stringOne.length){
+  return stringTwo;
 }
-
-
   // YOUR CODE ABOVE HERE //
-};
+}
 
 /**
  * Given two Strings, return 1 if the first string is higher in alphabetical order (meaning earlier in the alphabet) than
@@ -191,17 +188,16 @@ return string2;
  */
 function sortAscending(stringOne, stringTwo) {
   // YOUR CODE BELOW HERE //
-  string.split();
-if (stringOne.sort() > stringTwo.sort()) {
-  return 1; 
-} else if (stringTwo.sort() < stringOne.sort()){
-  retun - 1;
-} if (stringOne.sort() === stringTwo.sort()){
+if (stringOne < stringTwo){
+  return 1;
+}
+if (stringTwo < stringOne){
+  return - 1;
+} else if (stringOne === stringTwo){
   return 0;
 }
   // YOUR CODE ABOVE HERE //
 }
-console.log(sortAscending("Bear", "Bear"));
 
 /**
  * Given two Strings, return 1 if the first is lower in alphabetical order (meaning later in the alphabet) than
@@ -212,6 +208,14 @@ console.log(sortAscending("Bear", "Bear"));
  */
 function sortDescending(stringOne, stringTwo) {
   // YOUR CODE BELOW HERE //
+  if (stringOne > stringTwo){
+    return 1;
+  }
+  if (stringTwo > stringOne){
+    return - 1;
+  } else if (stringOne === stringTwo){
+    return 0;
+  }
   
   // YOUR CODE ABOVE HERE //
 }
