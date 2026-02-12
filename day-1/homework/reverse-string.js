@@ -20,16 +20,20 @@
  */
 
 function reverseString(input) {
+let reversed = '';
   // YOUR CODE BELOW HERE //
-  let reversed = "";
-  // create a for loop  that loops through the string
-for (const c of string){
-  reversed = c + reversed
-}
-return reversed;
-}
+  // create a for  loop
+  for (let i = 0; i < input.length; i++){
+    reversed = input[i] + reversed
+  }
+  return reversed;
+  }
+
+
+
+
   // YOUR CODE ABOVE HERE //
-}
+console.log(reverseString('hello'));
 
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
 if (

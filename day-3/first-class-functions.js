@@ -16,8 +16,12 @@ function createGreaterThanFilter(base) {
   // YOUR CODE BELOW HERE //
 
   return function(base){
-    if (base < number){
+    if (base < number || string ){
       console.log("number is greater than base");
+    } else if (string > base ){
+      console.log("string is greater than the base")
+    } else {
+    }
     }
     
   }
